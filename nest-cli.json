@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": false
+  },
+  "projects": {
+    "lambda-response": {
+      "type": "library",
+      "root": "libs/lambda-response",
+      "entryFile": "index",
+      "sourceRoot": "libs/lambda-response/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/lambda-response/tsconfig.lib.json"
+      }
+    },
+    "lambda-logs": {
+      "type": "library",
+      "root": "libs/lambda-logs",
+      "entryFile": "index",
+      "sourceRoot": "libs/lambda-logs/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/lambda-logs/tsconfig.lib.json"
+      }
+    },
+    "lambda-validator": {
+      "type": "library",
+      "root": "libs/lambda-validator",
+      "entryFile": "index",
+      "sourceRoot": "libs/lambda-validator/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/lambda-validator/tsconfig.lib.json"
+      }
+    },
+    "firebase": {
+      "type": "library",
+      "root": "libs/firebase",
+      "entryFile": "index",
+      "sourceRoot": "libs/firebase/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/firebase/tsconfig.lib.json"
+      }
+    }
+  }
+}

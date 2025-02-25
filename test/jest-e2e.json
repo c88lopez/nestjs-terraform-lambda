@@ -1,0 +1,28 @@
+{
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "json"
+  ],
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "testRegex": "/test/.*\\.(e2e-test|e2e-spec).(ts|tsx|js)$",
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,tsx,ts}",
+    "!**/node_modules/**",
+    "!**/vendor/**"
+  ],
+  "coverageReporters": [
+    "json",
+    "lcov"
+  ],
+  "moduleNameMapper": {
+    "^@guini/lambda-response(|/.*)$": "<rootDir>/../libs/lambda-response/src/$1",
+    "^@guini/lambda-logs(|/.*)$": "<rootDir>/../libs/lambda-logs/src/$1",
+    "^@guini/lambda-validator(|/.*)$": "<rootDir>/../libs/lambda-validator/src/$1",
+    "@guini/firebase/(.*)": "<rootDir>/../libs/firebase/src/$1",
+    "@guini/firebase": "<rootDir>/../libs/firebase/src"
+  }
+}

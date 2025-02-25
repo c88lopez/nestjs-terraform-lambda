@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  terraform:
+    image: hashicorp/terraform:1.5
+    volumes:
+      - ./infra/:/app/infra
+      - ./dist/:/app/dist
+      - ./layers/:/app/layers
+    working_dir: /app/infra
+    environment:
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+
+  test-db:
+    image: postgres:14.8-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres

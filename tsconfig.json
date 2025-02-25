@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "esModuleInterop": true,
+    "paths": {
+      "@guini/lambda-response": [
+        "libs/lambda-response/src"
+      ],
+      "@guini/lambda-response/*": [
+        "libs/lambda-response/src/*"
+      ],
+      "@guini/lambda-logs": [
+        "libs/lambda-logs/src"
+      ],
+      "@guini/lambda-logs/*": [
+        "libs/lambda-logs/src/*"
+      ],
+      "@guini/lambda-validator": [
+        "libs/lambda-validator/src"
+      ],
+      "@guini/lambda-validator/*": [
+        "libs/lambda-validator/src/*"
+      ],
+      "@guini/firebase": [
+        "libs/firebase/src"
+      ],
+      "@guini/firebase/*": [
+        "libs/firebase/src/*"
+      ]
+    }
+  }
+}
